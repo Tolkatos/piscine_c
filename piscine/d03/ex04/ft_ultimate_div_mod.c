@@ -6,9 +6,10 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/28 13:55:43 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/08/28 14:03:41 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/08/29 09:52:37 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
 
 void	ft_ultimate_div_mod(int *a, int *b)
@@ -31,5 +32,5 @@ int		main(void)
 	a = 5;
 	b = 2;
 	ft_ultimate_div_mod(&a, &b);
-	return 0;
+	return (0);
 }
