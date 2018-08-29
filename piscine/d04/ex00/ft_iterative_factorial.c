@@ -6,25 +6,27 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/29 10:35:30 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/08/29 10:57:07 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/08/29 12:59:40 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_iterative_factorial(int nb)
 {
-	int		i;
+	int		r;
 	int		j;
 
-	i = 1;
+	r = 1;
 	j = 1;
-	if (nb <= 0)
+	if (nb < 0)
 		return (0);
+	if (nb == 0 || nb == 1)
+		return (1);
 	while (j <= nb)
 	{
-		i *= j;
+		r *= j;
 		j++;
 	}
-	return (i);
+	return (r);
 }
 
 /*
