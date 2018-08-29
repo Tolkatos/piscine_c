@@ -6,9 +6,10 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/28 14:04:53 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/08/28 14:29:35 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/08/29 09:53:39 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -31,5 +32,5 @@ void	ft_putstr(char *str)
 int		main(void)
 {
 	ft_putstr("egsehgs");
-	return 0;
+	return (0);
 }
