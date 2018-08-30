@@ -6,11 +6,9 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/29 16:22:21 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/08/29 16:34:23 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/08/30 09:03:11 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int		ft_fibonnaci(int index)
 {
@@ -23,9 +21,10 @@ int		ft_fibonnaci(int index)
 	return (index + ft_fibonnaci(index - 1));
 }
 
-int		main(void)
-{
-	printf("%d", ft_fibonnaci(6));
-	return (0);
-}
-
+/*
+**int		main(void)
+**{
+**	printf("%d", ft_fibonnaci(6));
+**	return (0);
+**}
+*/
