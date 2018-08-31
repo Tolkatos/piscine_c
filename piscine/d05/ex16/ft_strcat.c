@@ -6,7 +6,7 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/31 12:04:50 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/08/31 13:29:13 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/08/31 13:37:37 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -28,7 +28,7 @@ char	*ft_strcat(char *dest, char *src)
 
 	i = 0;
 	dest_size = ft_strlen(dest);
-	while (dest[dest_size])
+	while (src[i])
 	{
 		dest[dest_size] = src[i];
 		dest_size++;
@@ -41,6 +41,6 @@ char	*ft_strcat(char *dest, char *src)
 int		main(int argc, char **argv)
 {
 	argc = 0;
-	printf("%s", strcat(argv[1], argv[2]));
+	printf("%s", ft_strcat(argv[1], argv[2]));
 	return (0);
 }
