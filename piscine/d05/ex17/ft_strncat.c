@@ -1,0 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/31 13:34:06 by ranuytte          #+#    #+#             */
+/*   Updated: 2018/08/31 13:49:23 by ranuytte         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <stdio.h>
+int		ft_strlen(char *str)
+{
+	int		i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+char	*ft_strncat(char *dest, char *src, int nb)
+{
+	int		i;
+	int		dest_size;
+
+	i = 0;
+	dest_size = ft_strlen(dest);
+	while (i <= nb)
+	{
+		dest[dest_size] = src[i];
+		dest_size++;
+		i++;
+	}
+	dest[dest_size] = '\0';
+	return (dest);
+}
+
+int		main(int argc, char **argv)
+{
+	argc = 0;
+	printf("%s", ft_strncat(argv[1], argv[2], 3));
+	return (0);
+}
