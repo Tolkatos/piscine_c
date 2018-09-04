@@ -6,7 +6,7 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/03 20:17:58 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/04 18:44:53 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/04 18:59:03 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -31,6 +31,8 @@ char	**ft_calc_nbr_word(char *str, char **tab)
 	}
 //	printf("%d", nb);
 	tab = (char**)malloc(sizeof(*tab) * (nb + 1));
+	if (tab == NULL)
+		return (0);
 	return (tab);
 }	
 
@@ -56,6 +58,8 @@ char	**ft_calc_len_word(char *str, char **tab)
 			}
 //			printf("%d", k);
 			tab[j] = (char*)malloc(sizeof(*tab) * (k + 1));
+			if (tab[j] == NULL)
+				return (0);
 			j++;
 			k = 0;
 		}
@@ -85,11 +89,11 @@ char	**ft_fill_in(char *str, char **tab)
 				i++;
 			}
 			tab[j][k + 1] = '\0';
-			printf("%c", tab[0][3]);
+	//		printf("%c", tab[0][3]);
 			k = 0;
 			j++;
 		}
-		printf("%c", tab[0][3]);
+		printf("%c", tab[1][3]);
 	}
 	return (tab);
 }
