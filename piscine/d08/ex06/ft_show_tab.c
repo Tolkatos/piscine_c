@@ -6,7 +6,7 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/06 22:16:11 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/07 10:17:04 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/07 12:10:44 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,11 @@ void	ft_show_tab(struct s_stock_par *par)
 	{
 		ft_putstr(par[i].copy);
 		ft_putchar('\n');
+		ft_putnbr(par[i].size_param);
+		ft_putchar('\n');
+		while (par[i].tab[j] != 0)
+		{
+			
 		i++;
 	}
 }
