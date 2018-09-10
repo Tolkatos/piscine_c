@@ -6,11 +6,12 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 13:27:16 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/08 15:58:41 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/10 12:46:07 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
-#include <stdio.h>
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -28,7 +29,21 @@ void	ft_putstr(char *str)
 	}
 }
 
-char	ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(char *s1, char *s2)
+{
+	int		i;
+
+	i = 0;
+	while (s1[i] && s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	if (s1[i] == s2[i])
+		return (s1[i] - s2[i]);
+	return (0);
+}
 
 int		main(int argc, char **argv)
 {
@@ -44,20 +59,16 @@ int		main(int argc, char **argv)
 		cmp = ft_strcmp(argv[i], argv[i + 1]);
 		if (cmp == 0 || cmp < 0)
 			i++;
-		else	
+		else
 		{
 			tmp = *argv[i];
 			*argv[i] = *argv[i + 1];
 			*argv[i + 1] = tmp;
-			i++;
+			i = 0;
 		}
 	}
 	i = 1;
 	while (i < argc)
-	{
-		ft_putstr(argv[i]);
-		i++;
-	}		
+		ft_putstr(argv[i++]);
 	return (0);
 }
-
