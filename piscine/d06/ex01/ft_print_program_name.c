@@ -6,10 +6,12 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 12:53:44 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/01 13:01:14 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/10 12:47:46 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
