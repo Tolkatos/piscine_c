@@ -6,16 +6,15 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/03 20:17:58 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/10 13:05:05 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/04 21:40:27 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdlib.h>
-
+#include <stdio.h>
 char	**ft_calc_nbr_word(char *str, char **tab)
 {
 	int		i;
-	int		nb;
+	int		nb; 
 
 	nb = 0;
 	i = 0;
@@ -26,7 +25,7 @@ char	**ft_calc_nbr_word(char *str, char **tab)
 		else
 		{
 			while (str[i] != '\n' && str[i] != '\t' && str[i] != ' ' && str[i])
-				i++;
+					i++;
 			nb++;
 		}
 	}
@@ -34,7 +33,7 @@ char	**ft_calc_nbr_word(char *str, char **tab)
 	if (tab == NULL)
 		return (0);
 	return (tab);
-}
+}	
 
 char	**ft_calc_len_word(char *str, char **tab)
 {
@@ -57,6 +56,8 @@ char	**ft_calc_len_word(char *str, char **tab)
 				k++;
 			}
 			tab[j] = (char*)malloc(sizeof(*tab) * (k + 1));
+			if (tab[j] == NULL)
+				return (0);
 			j++;
 			k = 0;
 		}
@@ -75,18 +76,22 @@ char	**ft_fill_in(char *str, char **tab)
 	k = 0;
 	while (str[i])
 	{
-		if (str[i] == '\n' || str[i] == '\t' || str[i] == ' ')
+		if ((str[i] == '\n' || str[i] == '\t' || str[i] == ' ') && str[i])
 			i++;
 		else
 		{
 			while (str[i] != '\n' && str[i] != '\t' && str[i] != ' ' && str[i])
-				tab[j][k++] = str[i++];
-			tab[j][k + 1] = '\0';
+			{
+				tab[j][k] = str[i];
+				k++;
+				i++;
+			}
+			tab[j][k] = '\0';
 			k = 0;
 			j++;
 		}
-		printf("%c", tab[1][0]);
 	}
+	tab[j] = 0;
 	return (tab);
 }
 
@@ -101,11 +106,4 @@ char	**ft_split_whitespaces(char *str)
 	return (tab);
 }
 
-/*
-**int		main(int argc, char **argv)
-**{
-**	argc = 0;
-**	ft_split_whitespaces(argv[1]);
-**	return (0);
-**}
-*/
+

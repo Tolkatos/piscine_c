@@ -6,17 +6,17 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/03 14:53:17 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/03 18:35:54 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/10 13:02:08 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 #include <stdlib.h>
 
 int		calc_len_params(int argc, char **argv)
 {
 	int		i;
 	int		j;
-	int 	r;
+	int		r;
 
 	r = 0;
 	i = 0;
@@ -43,8 +43,6 @@ char	*ft_concat_params(int argc, char **argv)
 	j = 0;
 	i = calc_len_params(argc, argv);
 	r = (char*)malloc(sizeof(*r) * (i + argc));
-	if (r == NULL)
-		return (0);
 	i = 0;
 	while (j < argc - 1)
 	{
@@ -58,11 +56,12 @@ char	*ft_concat_params(int argc, char **argv)
 			r[k] = '\0';
 		k++;
 	}
-	return (r);	
+	return (r);
 }
-
-int		main(int argc, char **argv)
-{
-	printf("%s", ft_concat_params(argc, argv));
-	return (0);
-}
+/*
+**int		main(int argc, char **argv)
+**{
+**	printf("%s", ft_concat_params(argc, argv));
+**	return (0);
+**}
+*/

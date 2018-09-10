@@ -1,46 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/03 14:20:36 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/10 12:59:27 by ranuytte         ###   ########.fr       */
+/*   Created: 2018/09/01 10:05:01 by ranuytte          #+#    #+#             */
+/*   Updated: 2018/09/10 13:06:02 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-int		ft_ultimate_range(int **range, int min, int max)
+void	ft_putchar(char c)
 {
-	int		*tab;
-	int		i;
-
-	i = 0;
-	tab = malloc(sizeof(int) * (max - min));
-	if (min >= max)
-	{
-		*range = 0;
-		return (0);
-	}
-	while (min < max)
-	{
-		tab[i] = min;
-		i++;
-		min++;
-	}
-	tab[i] = '\0';
-	*range = tab;
-	return (i);
+	write(1, &c, 1);
 }
-/*
-**int		main(void)
-**{
-**	int		*r;
-**
-**	r = 0;
-**	ft_ultimate_range(&r, 1, 10);
-**	return (0);
-**}
-*/
