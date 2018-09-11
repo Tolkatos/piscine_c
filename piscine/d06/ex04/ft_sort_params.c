@@ -6,7 +6,7 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 13:27:16 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/10 12:46:07 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/11 18:53:47 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int		main(int argc, char **argv)
 {
 	int		i;
 	char	cmp;
-	char	tmp;
+	char	*tmp;
 
 	i = 1;
 	cmp = 0;
@@ -61,14 +61,17 @@ int		main(int argc, char **argv)
 			i++;
 		else
 		{
-			tmp = *argv[i];
-			*argv[i] = *argv[i + 1];
-			*argv[i + 1] = tmp;
+			tmp = argv[i];
+			argv[i] = argv[i + 1];
+			argv[i + 1] = tmp;
 			i = 0;
 		}
 	}
 	i = 1;
 	while (i < argc)
+	{
 		ft_putstr(argv[i++]);
+		ft_putchar('\n');
+	}
 	return (0);
 }
