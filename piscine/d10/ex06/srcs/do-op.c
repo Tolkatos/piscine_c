@@ -6,7 +6,7 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 10:00:34 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/12 21:10:21 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/12 21:28:49 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,21 @@ int		ft_do_op(int a, char c,  int b)
 
 int		main(int argc, char **argv)
 {
-	argc = 0;
 	if (argv[2][1] != '\0')
 	{
 		ft_putchar('0');
+		ft_putchar('\n');
 		return (0);
 	}
 	if (ft_div_mod_0(*argv[2], atoi(argv[3])) == 0)
 		return (0);
-	ft_putnbr(ft_do_op(atoi(argv[1]), *argv[2], atoi(argv[3])));
+	if (argc == 4)
+	{
+		ft_putnbr(ft_do_op(atoi(argv[1]), *argv[2], atoi(argv[3])));
+		ft_putchar('\n');
+	}
+	else
+		return (0);
 	return (0);
 }
 
