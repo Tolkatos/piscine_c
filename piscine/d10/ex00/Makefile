@@ -6,7 +6,7 @@
 #    By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/10 21:16:30 by ranuytte          #+#    #+#              #
-#    Updated: 2018/09/11 10:37:45 by ranuytte         ###   ########.fr        #
+#    Updated: 2018/09/11 22:38:45 by ranuytte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ SOURCES = ./srcs/ft_putchar.c \
 		  ./srcs/ft_swap.c
 OBJ = ft_*.o
 FLAGS = -Wall -Wextra -Werror
-INCLUDES = ./includes/*
 
 all: $(NAME)
 

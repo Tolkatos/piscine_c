@@ -6,11 +6,11 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 12:57:40 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/11 13:04:18 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/16 11:13:10 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_count_if(char **tab, int(*f)(char*))
+int		ft_count_if(char **tab, int (*f)(char*))
 {
 	int		i;
 	int		j;
@@ -31,4 +31,3 @@ int		ft_count_if(char **tab, int(*f)(char*))
 	}
 	return (r);
 }
-
