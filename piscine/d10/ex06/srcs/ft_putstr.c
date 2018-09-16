@@ -6,11 +6,11 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:37:37 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/10 12:48:10 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/16 11:32:08 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include "ft.h"
 
 void	ft_putstr(char *str)
 {

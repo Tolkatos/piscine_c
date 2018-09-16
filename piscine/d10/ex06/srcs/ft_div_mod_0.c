@@ -6,12 +6,11 @@
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:01:25 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/12 20:35:30 by ranuytte         ###   ########.fr       */
+/*   Updated: 2018/09/16 11:45:28 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str);
-void	ft_putchar(char c);
+#include "ft.h"
 
 int		ft_div_mod_0(char c, int b)
 {
@@ -37,4 +36,3 @@ int		ft_div_mod_0(char c, int b)
 	}
 	return (1);
 }
-

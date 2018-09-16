@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/30 10:32:18 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/16 11:31:26 by ranuytte         ###   ########.fr       */
+/*   Created: 2018/08/30 10:52:13 by ranuytte          #+#    #+#             */
+/*   Updated: 2018/09/16 11:59:49 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include <stdlib.h>
 
-void	ft_putnbr(int nb)
+int		ft_atoi(char *str)
 {
-	unsigned int	r;
+	int		i;
+	int		s;
+	int		r;
 
+	i = 0;
+	s = 1;
 	r = 0;
-	if (nb < 0)
+	while (str[i] == '\t' || str[i] == '\v' || str[i] == '\n' \
+			|| str[i] == '\r' || str[i] == '\f' || str[i] == ' ')
+		i++;
+	if (str[i] == '-')
 	{
-		ft_putchar('-');
-		r = nb * -1;
+		s = -1;
+		i++;
 	}
-	else
-		r = nb;
-	if (r > 9)
-		ft_putnbr(r / 10);
-	ft_putchar(r % 10 + 48);
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		r *= 10;
+		r += str[i] - '0';
+		i++;
+	}
+	return (r * s);
 }
-
-/*
-**int		main(void)
-**{
-**	ft_putnbr(INT_MIN);
-**	return (0);
-**}
-*/

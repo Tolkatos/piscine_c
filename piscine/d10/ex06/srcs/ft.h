@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ranuytte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/30 10:32:18 by ranuytte          #+#    #+#             */
-/*   Updated: 2018/09/16 11:31:26 by ranuytte         ###   ########.fr       */
+/*   Created: 2018/09/16 11:16:42 by ranuytte          #+#    #+#             */
+/*   Updated: 2018/09/16 11:57:26 by ranuytte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#ifndef FT_H
+# define FT_H
 
-void	ft_putnbr(int nb)
-{
-	unsigned int	r;
+int		ft_addition(int a, int b);
+int		ft_soustraction(int a, int b);
+int		ft_multiplication(int a, int b);
+int		ft_division(int a, int b);
+int		ft_modulo(int a, int b);
+int		ft_check_operateur(char c);
+int		ft_div_mod_0(char c, int b);
+void	ft_putnbr(int nb);
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
+int		ft_atoi(char *str);
 
-	r = 0;
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		r = nb * -1;
-	}
-	else
-		r = nb;
-	if (r > 9)
-		ft_putnbr(r / 10);
-	ft_putchar(r % 10 + 48);
-}
-
-/*
-**int		main(void)
-**{
-**	ft_putnbr(INT_MIN);
-**	return (0);
-**}
-*/
+#endif
